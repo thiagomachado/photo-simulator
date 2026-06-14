@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Simulator</title>
+    <link rel="stylesheet" href="src/style.css">
+    <!-- Using importmap to allow importing 'animejs' directly in modules -->
+    <script type="importmap">
+        {
+            "imports": {
+                "animejs": "./node_modules/animejs/dist/modules/index.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Retractable Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <button id="toggle-menu" class="toggle-btn" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="menu-content">
+                <h2>Lenses</h2>
+                <ul>                    
+                    <li><a href="#">18-55 mm</a></li>
+                    <li><a href="#">70-300 mm</a></li>
+                    <li><a href="#">100-400 mm</a></li>
+                    <li><a href="#">600-1200 mm</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Camera Simulator Area -->
+        <main class="main-content">
+            <div class="camera-space">                
+                <div class="viewfinder">
+                    <!-- Simulator view will be injected here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
