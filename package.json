@@ -6,8 +6,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/thiagomachado/photo-simulator/issues"
   },
-  "homepage": "https://github.com/thiagomachado/photo-simulator#readme"
+  "homepage": "https://thiagomachado.github.io/photo-simulator/"
 }
